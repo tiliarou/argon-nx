@@ -141,7 +141,9 @@ void gfx_clear_grey(gfx_ctxt_t *ctxt, u8 color)
 
 void gfx_clear_color(gfx_ctxt_t *ctxt, u32 color)
 {
-    memset(ctxt->fb, color, ctxt->width * ctxt->stride * 4);
+    for (u32 x = 0; x < ctxt->width; x++)
+		for (u32 y = 0; y < ctxt->height; y++)
+            gfx_set_pixel(ctxt, x, y, color);
 }
 
 void gfx_clear_partial_grey(gfx_ctxt_t *ctxt, u8 color, u32 pos_x, u32 height)
@@ -453,7 +455,8 @@ void gfx_set_rect_grey(gfx_ctxt_t *ctxt, const u8 *buf, u32 size_x, u32 size_y, 
     {
         for (u32 x = pos_x; x < (pos_x + size_x); x++)
         {
-            memset(&ctxt->fb[y + (ctxt->width - x) * ctxt->stride], buf[pos], 4);
+            if (buf[pos] != 0)
+                memset(&ctxt->fb[y + (ctxt->width - x) * ctxt->stride], buf[pos], 4);
             pos++;
         }
     }
@@ -560,3 +563,4 @@ void gfx_render_bmp_arg_bitmap(gfx_ctxt_t *ctxt, u8 *bitmap, u32 x, u32 y, u32 w
 {
     gfx_render_bmp_arg_bitmap_transparent(ctxt, bitmap, x, y, width, height, TRANSPARENT_COLOR);
 }
+

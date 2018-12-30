@@ -98,4 +98,6 @@ void gfx_render_bmp_arg_bitmap(gfx_ctxt_t *ctxt, u8* bitmap, u32 x, u32 y, u32 w
 void gfx_render_bmp_arg_bitmap_transparent(gfx_ctxt_t *ctxt, u8* bitmap, u32 x, u32 y, u32 width, u32 height, u32 transparent_color);
 void gfx_render_bmp_arg_file(gfx_ctxt_t *ctxt, char *path, u32 x, u32 y, u32 width, u32 height);
 
+void gfx_render_text(gfx_con_t *con, char* text, u32 x, u32 y, u32 width, bool light);
+
 #endif

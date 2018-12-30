@@ -6,7 +6,7 @@
 #define _MF_JUSTIFY_H_
 
 #include "libs/mcufont/mf_rlefont.h"
-#include <stdbool.h>
+#include "utils/types.h"
 
 enum mf_align_t
 {

@@ -1,5 +1,5 @@
 #include "libs/mcufont/mf_font.h"
-#include <stdbool.h>
+#include "utils/types.h"
 
 uint8_t mf_render_character(const struct mf_font_s *font,
                             int16_t x0, int16_t y0,

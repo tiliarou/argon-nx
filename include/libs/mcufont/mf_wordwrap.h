@@ -6,7 +6,7 @@
 #define _MF_WORDWRAP_H_
 
 #include "libs/mcufont/mf_rlefont.h"
-#include <stdbool.h>
+#include "utils/types.h"
 
 /* Callback function for handling each line.
  *

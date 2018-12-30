@@ -1,5 +1,5 @@
 #include "libs/mcufont/mf_kerning.h"
-#include <stdbool.h>
+#include "utils/types.h"
 
 #if MF_USE_KERNING
 

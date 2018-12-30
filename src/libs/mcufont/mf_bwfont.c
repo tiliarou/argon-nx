@@ -1,5 +1,5 @@
 #include "libs/mcufont/mf_bwfont.h"
-#include <stdbool.h>
+#include "utils/types.h"
 
 /* Find the character range and index that contains a given glyph.. */
 static const struct mf_bwfont_char_range_s *find_char_range(
