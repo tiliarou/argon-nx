@@ -131,7 +131,7 @@ void gfx_render_text(gfx_con_t *con, char* text, u32 x, u32 y, u32 width, bool l
     /* TODO: Custom state */
     /* Init state and allocate and clear the image buffer */
     state.alignment = MF_ALIGN_LEFT;
-    state.margin = 5;
+    state.margin = x;
     state.anchor = state.margin;
     state.width = width;
     state.height = height;
