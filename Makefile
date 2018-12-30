@@ -15,7 +15,7 @@ SOURCES		      := src \
 										src/core \
 										src/ianos \
 										src/gfx \
-										src/libs/fatfs src/libs/elfload src/libs/compr \
+										src/libs/fatfs src/libs/elfload src/libs/compr src/libs/mcufont \
 										src/mem \
 										src/menu/gui \
 										src/minerva \
