@@ -453,7 +453,7 @@ void gfx_set_rect_grey(gfx_ctxt_t *ctxt, const u8 *buf, u32 size_x, u32 size_y, 
     {
         for (u32 x = pos_x; x < (pos_x + size_x); x++)
         {
-            memset(&ctxt->fb[x + y * ctxt->stride], buf[pos], 4);
+            memset(&ctxt->fb[y + (ctxt->width - x) * ctxt->stride], buf[pos], 4);
             pos++;
         }
     }

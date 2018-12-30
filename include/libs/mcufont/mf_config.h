@@ -19,10 +19,6 @@
  * Configuration settings related to build environment *
  *******************************************************/
 
-/* Name of the file that contains all the included fonts. */
-#ifndef MF_FONT_FILE_NAME
-#define MF_FONT_FILE_NAME "fonts.h"
-#endif
 
 
 /*****************************************
